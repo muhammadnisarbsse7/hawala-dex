@@ -61,18 +61,18 @@ function App() {
         }`}
       >
         <div className="text-sm flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-end lg:items-center lg:flex-grow ">
-          <a
+          {/* <a
             href="/swap"
             className="block mt-4 font-inter font-normal text-[14px] leading-[16.94px] lg:font-semibold lg:text-[20px] lg:leading-[24.2px] lg:inline-block lg:mt-0 text-[#494949] lg:mr-4"
           >
-            Swap BTCssssss
-          </a>
-          <a
+            Swap BTC
+          </a> */}
+          {/* <a
             href="/buyhawala"
             className="block mt-4 font-inter font-normal text-[14px] leading-[16.94px] lg:font-semibold lg:text-[20px] lg:leading-[24.2px] lg:inline-block lg:mt-0 text-[#494949] lg:mr-20"
           >
             Buy Hawala
-          </a>
+          </a> */}
           <button
             href="#"
             className="w-[127px] lg:w-auto block mt-4 p-3 rounded-xl space-x-3 bg-[#FF3389] lg:inline-block lg:mt-0 lg:mr-4 "
