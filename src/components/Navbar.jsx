@@ -65,7 +65,7 @@ function App() {
             href="/swap"
             className="block mt-4 font-inter font-normal text-[14px] leading-[16.94px] lg:font-semibold lg:text-[20px] lg:leading-[24.2px] lg:inline-block lg:mt-0 text-[#494949] lg:mr-4"
           >
-            Swap BTC
+            Swap BTCssssss
           </a>
           <a
             href="/buyhawala"
