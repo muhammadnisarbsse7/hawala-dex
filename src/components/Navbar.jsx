@@ -6,9 +6,11 @@ import { SunIcon } from "../SVG/SunIcon";
 import { MoonIcon } from "../SVG/MoonIcon";
 import { NavLink } from "react-router-dom";
 import { EthIcon } from "../SVG/ETHIcon";
+import { TonIcon } from "../SVG/TonIcon";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isUsdtOpen, setIsUsdtOpen] = useState(false);
 
   return (
     <nav className="flex items-center justify-between flex-wrap p-2 drop-shadow-lg border-b-4 border-white">
@@ -64,31 +66,36 @@ function App() {
         }`}
       >
         <div className="text-sm flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-end lg:items-center lg:flex-grow ">
-          {/* <a
-            href="/swap"
-            className="block mt-4 font-inter font-normal text-[14px] leading-[16.94px] lg:font-semibold lg:text-[20px] lg:leading-[24.2px] lg:inline-block lg:mt-0 text-[#494949] lg:mr-4"
-          >
-            Swap BTC
-          </a> */}
-          {/* <a
-            href="/buyhawala"
-            className="block mt-4 font-inter font-normal text-[14px] leading-[16.94px] lg:font-semibold lg:text-[20px] lg:leading-[24.2px] lg:inline-block lg:mt-0 text-[#494949] lg:mr-20"
-          >
-            Buy Hawala
-          </a> */}
+          <div className="relative">
+            <button
+              onClick={() => {
+                setIsUsdtOpen(!isUsdtOpen);
+              }}
+              href="#"
+              className="w-[127px] lg:w-auto block mt-4 p-3 rounded-xl space-x-3 bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0 lg:mr-4 "
+            >
+              <div className="flex font-inter text-[12px] lg:text-[16px] leading-[19.36px] text-white flex-row items-center gap-2">
+                <EthIcon />
+                ETH Chain
+                <ArrowUpIcon />
+              </div>
+            </button>
+            {isUsdtOpen && (
+              <div className="absolute mt-2 w-[140px] bg-white rounded-xl shadow-lg">
+                <button
+                  href="#"
+                  className="w-full p-3 rounded-xl font-inter font-normal text-[16px] text-[#494949] leading-[19.36px] flex items-start justify-start gap-2  hover:bg-[#FF2070]"
+                >
+                  <TonIcon />
+                  USDT
+                </button>
+              </div>
+            )}
+          </div>
+
           <button
             href="#"
-            className="w-[127px] lg:w-auto block mt-4 p-3 rounded-xl space-x-3 bg-[#FF3389] lg:inline-block lg:mt-0 lg:mr-4 "
-          >
-            <div className="flex font-inter text-[12px] lg:text-[16px] leading-[19.36px] text-white flex-row items-center gap-2">
-              <EthIcon />
-              ETH Chain
-              <ArrowUpIcon />
-            </div>
-          </button>
-          <button
-            href="#"
-            className="w-[127px] lg:w-auto lg:py-3 lg:mr-4  block mt-4 py-3 px-4 font-inter font-medium text-[12px] lg:text-[16px] leading-[14.52px] lg:leading-[19.36px] text-white rounded-xl  bg-[#FF3389] lg:inline-block lg:mt-0 "
+            className="w-[127px] lg:w-auto lg:py-3 lg:mr-4  block mt-4 py-3 px-4 font-inter font-medium text-[12px] lg:text-[16px] leading-[14.52px] lg:leading-[19.36px] text-white rounded-xl  bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0 "
           >
             <div className="flex flex-row items-center gap-2">
               Connect Wallet
@@ -96,7 +103,7 @@ function App() {
           </button>
           <button
             href="#"
-            className="w-[127px] lg:w-auto lg:px-0 block mt-4 py-2.5 px-2 rounded-xl bg-[#FF3389] lg:inline-block lg:mt-0 text-white-200 lg:mr-4"
+            className="w-[127px] lg:w-auto lg:px-0 block mt-4 py-2.5 px-2 rounded-xl bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0 text-white-200 lg:mr-4"
           >
             <div className="flex flex-row px-3 justify-between items-center gap-2">
               <SunIcon />

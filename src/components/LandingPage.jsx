@@ -11,7 +11,7 @@ const LandingPage = () => {
         <p className="mt-4">Welcome to our landing page!</p>
 
         {/* Repeated content for demonstration */}
-        <div>LandingP</div>
+        <div>LandingPage</div>
         <div>LandingPage</div>
         <div>LandingPage</div>
         <div>LandingPage</div>
