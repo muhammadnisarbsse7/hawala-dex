@@ -2,8 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SwapBtc from "./components/SwapBtc";
-import BuyHawala from "./components/BuyHawala";
+import LandingPage from "./components/LandingPage";
+// import SwapBtc from "./components/SwapBtc";
+// import BuyHawala from "./components/BuyHawala";
 // import Contact from "./pages/Contact";
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
         <Navbar />
         <div className="flex-grow">
           <Routes>
-            <Route path="/swap" element={<SwapBtc />} />
-            <Route path="/buyhawala" element={<BuyHawala />} />
+            <Route path="/" element={<LandingPage />} />
+            {/* <Route path="/buyhawala" element={<BuyHawala />} /> */}
             {/* <Route path="/contact" element={<Contact />} /> */}
           </Routes>
         </div>

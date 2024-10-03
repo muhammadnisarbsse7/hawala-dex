@@ -4,6 +4,7 @@ import { BnbIcon } from "../SVG/BnbIcon";
 import { ArrowUpIcon } from "../SVG/ArrowUpIcon";
 import { SunIcon } from "../SVG/SunIcon";
 import { MoonIcon } from "../SVG/MoonIcon";
+import { NavLink } from "react-router-dom";
 // import locofy from "./locofy.png";
 
 function App() {
@@ -12,11 +13,13 @@ function App() {
   return (
     <nav className="flex items-center justify-between flex-wrap p-2 drop-shadow-lg border-b-4 border-white">
       <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72 ">
-        <img
-          src={HawalaLogo}
-          className="hidden sm:block w-auto h-20 mr-2"
-          alt="Logo"
-        />
+        <NavLink to="/">
+          <img
+            src={HawalaLogo}
+            className="hidden sm:block w-auto h-20 mr-2"
+            alt="Logo"
+          />
+        </NavLink>
       </div>
       <div className="block lg:hidden">
         <button
