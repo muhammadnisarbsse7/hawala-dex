@@ -5,6 +5,7 @@ import { ArrowUpIcon } from "../SVG/ArrowUpIcon";
 import { SunIcon } from "../SVG/SunIcon";
 import { MoonIcon } from "../SVG/MoonIcon";
 import { NavLink } from "react-router-dom";
+import { EthIcon } from "../SVG/ETHIcon";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,8 +81,8 @@ function App() {
             className="w-[127px] lg:w-auto block mt-4 p-3 rounded-xl space-x-3 bg-[#FF3389] lg:inline-block lg:mt-0 lg:mr-4 "
           >
             <div className="flex font-inter text-[12px] lg:text-[16px] leading-[19.36px] text-white flex-row items-center gap-2">
-              <BnbIcon />
-              BNB Chain
+              <EthIcon />
+              ETH Chain
               <ArrowUpIcon />
             </div>
           </button>
