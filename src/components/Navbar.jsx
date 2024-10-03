@@ -5,7 +5,6 @@ import { ArrowUpIcon } from "../SVG/ArrowUpIcon";
 import { SunIcon } from "../SVG/SunIcon";
 import { MoonIcon } from "../SVG/MoonIcon";
 import { NavLink } from "react-router-dom";
-// import locofy from "./locofy.png";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
