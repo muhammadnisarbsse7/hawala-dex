@@ -36,7 +36,7 @@ function App() {
           <NavLink to="/">
             <img
               src={HawalaLogo}
-              className="hidden sm:block w-auto h-20 mr-2"
+              className="block  sm:block w-auto h-20 mr-2"
               alt="Logo"
             />
           </NavLink>
@@ -132,17 +132,22 @@ function App() {
 
       {/* Wallet Modal (Positioned right below the navbar) */}
       {isWalletModalOpen && (
-        <div className="absolute top-[70px] left- right-6 mt-2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50">
+        <div
+          className={`absolute top-[192px]  lg:top-[70px] mt-2 left-1/2 transform -translate-x-1/2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50 
+      transition-all duration-300 ease-out scale-95 opacity-0 
+      ${isWalletModalOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
+      lg:left-auto lg:transform-none lg:right-6`}
+        >
+          {" "}
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <h2 className="font-inter font-semibold text-[14px] leading-[12.6px] text-[#FF3389]">
               Your Wallet
             </h2>
             <button onClick={() => setIsWalletModalOpen(false)}>
-              <CrossIcon /> {/* Assume CrossIcon is available */}
+              <CrossIcon />
             </button>
           </div>
-
           {/* Toggle Button (Wallet / Transactions) */}
           <div className="flex justify-between items-center mb-4 rounded-[6.3px] border border-[#FF3389]">
             <button
@@ -166,7 +171,6 @@ function App() {
               Transactions
             </button>
           </div>
-
           {/* Recent Transactions and Clear All */}
           {!isWalletView && (
             <div className="flex justify-between items-center mb-5">
@@ -178,7 +182,6 @@ function App() {
               </button>
             </div>
           )}
-
           {/* Transaction List */}
           {!isWalletView && (
             <div className="space-y-1">
@@ -195,9 +198,7 @@ function App() {
               ))}
             </div>
           )}
-
           {/* Wallet */}
-
           {isWalletView && (
             <div>
               {/* Wallet Address with Copy Button */}
@@ -217,27 +218,9 @@ function App() {
                 </div>
               </div>
 
-              {/* Chain Selection and ETHScan Link */}
               <div className="flex justify-between items-center mb-5">
                 <button className="flex font-inter font-medium text-[10.5px] leading-[12.71px] items-center bg-[#26A17B] text-white rounded-full px-4 py-1">
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14Z"
-                      fill="#26A17B"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.70963 7.24675V7.24588C7.6615 7.24938 7.41344 7.26425 6.86 7.26425C6.41812 7.26425 6.10706 7.25113 5.99769 7.24588V7.24719C4.29669 7.17238 3.02706 6.87619 3.02706 6.52181C3.02706 6.16744 4.29669 5.87169 5.99769 5.79556V6.95231C6.10881 6.96019 6.42731 6.979 6.86744 6.979C7.3955 6.979 7.66019 6.95713 7.70963 6.95275V5.79644C9.40713 5.87212 10.6737 6.16831 10.6737 6.52181C10.6737 6.87619 9.40713 7.1715 7.70963 7.24675ZM7.70963 5.67613V4.641H10.0782V3.0625H3.62906V4.641H5.99769V5.67569C4.07269 5.76406 2.625 6.14556 2.625 6.60231C2.625 7.05906 4.07269 7.44012 5.99769 7.52894V10.8461H7.70963V7.52806C9.63156 7.43969 11.0757 7.05862 11.0757 6.60231C11.0757 6.146 9.63156 5.76494 7.70963 5.67613Z"
-                      fill="white"
-                    />
-                  </svg>
+                  <TonIcon />
                   USDT Chain
                 </button>
                 <a
@@ -248,7 +231,6 @@ function App() {
                 </a>
               </div>
 
-              {/* Balance and HawalaDEX */}
               <div className="flex flex-col">
                 <div className="flex justify-between mb-2">
                   <span className="font-inter font-medium text-[10.5px] text-[#4A4A4A] leading-[12.71px]">
@@ -269,8 +251,6 @@ function App() {
               </div>
             </div>
           )}
-
-          {/* Disconnect Button */}
           <button className="mt-6 w-full font-inter font-semibold text-[10.5px] leading-[12.6px] py-1 border border-[#999999] text-[#999999] rounded-[5.6px] hover:bg-[#eeeeee]">
             Disconnect Wallet
           </button>
