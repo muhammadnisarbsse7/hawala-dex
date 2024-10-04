@@ -197,8 +197,8 @@ function App() {
           )}
 
           {/* Disconnect Button */}
-          <button className="mt-6 w-full py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-            Disconnect
+          <button className="mt-6 w-full font-inter font-semibold text-[10.5px] leading-[12.6px] py-1 border border-[#999999] text-[#999999] rounded-[5.6px] hover:bg-[#eeeeee]">
+            Disconnect Wallet
           </button>
         </div>
       )}
