@@ -7,6 +7,8 @@ import { MoonIcon } from "../SVG/MoonIcon";
 import { NavLink } from "react-router-dom";
 import { EthIcon } from "../SVG/ETHIcon";
 import { TonIcon } from "../SVG/TonIcon";
+import { CrossIcon } from "../SVG/CrossIcon";
+import { TickIcon } from "../SVG/TickIcon";
 // import { CrossIcon } from "../SVG/CrossIcon"; // Assuming CrossIcon exists
 
 function App() {
@@ -14,6 +16,17 @@ function App() {
   const [isUsdtOpen, setIsUsdtOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false); // State for Wallet Modal
   const [isWalletView, setIsWalletView] = useState(true); // State for toggling between wallet and transactions
+
+  const transactions = [
+    "Swap $120,000 USDT for 2 BTC",
+    "Approve USDT",
+    "Swap $180,000 USDT for 3 BTC",
+    "Approve USDT",
+    "Swap $1,200,000 USDT for 20 BTC",
+    "Approve USDT",
+    "Swap $180,000 USDT for 3 BTC",
+    "Approve USDT",
+  ];
 
   return (
     <>
@@ -50,6 +63,7 @@ function App() {
                 stroke-linejoin="round"
               />
             </svg>
+
             <svg
               className={`fill-current  h-4 w-4 ${isOpen ? "block" : "hidden"}`}
               width="16"
@@ -109,7 +123,6 @@ function App() {
             >
               <div className="flex flex-row px-3 justify-between items-center gap-2">
                 <SunIcon />
-                switch
                 <MoonIcon />
               </div>
             </button>
@@ -119,32 +132,34 @@ function App() {
 
       {/* Wallet Modal (Positioned right below the navbar) */}
       {isWalletModalOpen && (
-        <div className="absolute top-[70px] left- right-6 mt-2 mx-auto w-[300px] bg-white rounded-lg shadow-lg p-6 z-50">
+        <div className="absolute top-[70px] left- right-6 mt-2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-bold">Your Wallet</h2>
+            <h2 className="font-inter font-semibold text-[14px] leading-[12.6px] text-[#FF3389]">
+              Your Wallet
+            </h2>
             <button onClick={() => setIsWalletModalOpen(false)}>
-              <TonIcon /> {/* Assume CrossIcon is available */}
+              <CrossIcon /> {/* Assume CrossIcon is available */}
             </button>
           </div>
 
           {/* Toggle Button (Wallet / Transactions) */}
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4 rounded-[6.3px] border border-[#FF3389]">
             <button
-              className={`py-2 px-4 ${
+              className={`py-[6px] px-7 rounded-[6.3px] ${
                 isWalletView
-                  ? "bg-[#FF3389] text-white"
-                  : "bg-gray-200 text-black"
+                  ? "bg-[#FF3389] font-inter font-medium text-[10.5px] leading-[12.6px] text-white"
+                  : " font-inter font-medium text-[10.5px] leading-[12.6px] text-[#9A9FBF]"
               }`}
               onClick={() => setIsWalletView(true)}
             >
               Wallet
             </button>
             <button
-              className={`py-2 px-4 ${
+              className={`py-[6px] px-2 rounded-[6.3px] ${
                 !isWalletView
-                  ? "bg-[#FF3389] text-white"
-                  : "bg-gray-200 text-black"
+                  ? "bg-[#FF3389] font-inter font-medium text-[10.5px] leading-[12.6px] text-white"
+                  : " font-inter font-medium text-[10.5px] leading-[12.6px] text-[#9A9FBF]"
               }`}
               onClick={() => setIsWalletView(false)}
             >
@@ -154,9 +169,11 @@ function App() {
 
           {/* Recent Transactions and Clear All */}
           {!isWalletView && (
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-medium">Recent Transactions</h3>
-              <button className="text-sm text-blue-600 hover:underline">
+            <div className="flex justify-between items-center mb-5">
+              <h3 className="font-iner  font-semibold text-[11.2px] text-[#FF3389] leading-[12.6px]">
+                Recent Transactions
+              </h3>
+              <button className="font-inter font-semibold text-[8.4px] text-[#126FB2] leading-[12.6px]  hover:underline">
                 Clear All
               </button>
             </div>
@@ -164,32 +181,18 @@ function App() {
 
           {/* Transaction List */}
           {!isWalletView && (
-            <div className="space-y-2">
+            <div className="space-y-1">
               {/* Transaction Items */}
-              {Array(8)
-                .fill(0)
-                .map((_, idx) => (
-                  <div key={idx} className="flex items-center space-x-2">
-                    <div className="h-4 w-4 bg-green-500 rounded-full flex items-center justify-center">
-                      {/* Tick Circle */}
-                      <svg
-                        className="h-3 w-3 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-sm">Swap $120,000 USDT for 2 BTC</p>
+              {transactions.map((transaction, idx) => (
+                <div key={idx} className="flex items-center space-x-2">
+                  <div className="h-4 w-4  rounded-full flex items-center justify-center">
+                    <TickIcon />
                   </div>
-                ))}
+                  <p className="font-inter font-normal text-[6px] text-[#000000] leading-[7.26px]">
+                    {transaction}
+                  </p>
+                </div>
+              ))}
             </div>
           )}
 
