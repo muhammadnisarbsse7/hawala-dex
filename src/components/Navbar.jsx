@@ -113,7 +113,7 @@ function App() {
               className="w-[127px] lg:w-auto lg:py-3 lg:mr-4 block mt-4 py-3 px-4 font-inter font-medium text-[12px] lg:text-[16px] leading-[14.52px] lg:leading-[19.36px] text-white rounded-xl bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0"
             >
               <div className="flex flex-row items-center gap-2">
-                Connect Wallet
+                Connect Wallett
               </div>
             </button>
 
