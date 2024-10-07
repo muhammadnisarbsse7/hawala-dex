@@ -52,6 +52,9 @@ const Footer = () => {
             <p className="font-inter font-medium text-[14px] text-[#494949] leading-7">
               X/Twitter
             </p>
+            <p className="font-inter font-medium text-[14px] text-[#494949] leading-7">
+              Discord
+            </p>
           </div>
         </div>
         <div className="flex justify-center py-3  font-inter font-medium text-[12px] text-[#494949] leading-[14.52px] gap-1 ">
