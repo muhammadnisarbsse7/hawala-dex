@@ -23,11 +23,11 @@ const LandingPage = () => {
         <div className="grid lg:col-span-3  min-h-[450px] ">
           <BitcoinCard {...bitcoinData} />
         </div>
-        <div className="grid lg:col-span-4 bg-green-900 min-h-[450px]">
-          Graph
+        <div className="grid lg:col-span-4  min-h-[450px]">
+          Graph under developement
         </div>
-        <div className="grid lg:col-span-3 bg-yellow-700 min-h-[450px]">
-          Swap
+        <div className="grid lg:col-span-3  min-h-[450px]">
+          Swap under developement
         </div>
       </div>
     </main>
