@@ -19,8 +19,8 @@ const LandingPage = () => {
       className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/asset/BgImage.png')" }}
     >
-      <div className="grid lg:grid-cols-10 bg-black lg:gap-7 my-28 ">
-        <div className="grid lg:col-span-3 bg-red-800 min-h-[450px] ">
+      <div className="grid lg:grid-cols-10  lg:gap-7 my-28 ">
+        <div className="grid lg:col-span-3  min-h-[450px] ">
           <BitcoinCard {...bitcoinData} />
         </div>
         <div className="grid lg:col-span-4 bg-green-900 min-h-[450px]">
