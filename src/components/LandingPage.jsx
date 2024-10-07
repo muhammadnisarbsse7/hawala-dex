@@ -1,40 +1,34 @@
 import React from "react";
+import BitcoinCard from "./BitCoinCard";
 
 const LandingPage = () => {
+  const bitcoinData = {
+    price: 61988.4,
+    priceChange: -2.3,
+    marketCap: 1225937901567,
+    volume24h: 44723413616,
+    volumeChange: 27.06,
+    circulatingSupply: 19761509,
+    totalSupply: 19761509,
+    maxSupply: 21000000,
+    fullyDilutedMarketCap: 1302769739543,
+  };
+
   return (
     <main
       className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/asset/BgImage.png')" }}
     >
-      <div className="text-black text-center py-10">
-        <h1 className="text-4xl font-bold">Landing Page</h1>
-        <p className="mt-4">Welcome to our landing page!</p>
-
-        {/* Repeated content for demonstration */}
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
-        <div>LandingPage</div>
+      <div className="grid lg:grid-cols-10 bg-black lg:gap-7 my-28 ">
+        <div className="grid lg:col-span-3 bg-red-800 min-h-[450px] ">
+          <BitcoinCard {...bitcoinData} />
+        </div>
+        <div className="grid lg:col-span-4 bg-green-900 min-h-[450px]">
+          Graph
+        </div>
+        <div className="grid lg:col-span-3 bg-yellow-700 min-h-[450px]">
+          Swap
+        </div>
       </div>
     </main>
   );

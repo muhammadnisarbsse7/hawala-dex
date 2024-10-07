@@ -36,7 +36,7 @@ function App() {
           <NavLink to="/">
             <img
               src={UpdatedLogo}
-              className="block  sm:block w-auto h-20 mr-2"
+              className="block sm:block w-auto h-20 mr-2"
               alt="Logo"
             />
           </NavLink>
