@@ -84,10 +84,14 @@ const BitcoinCard = ({
             </p>
           </div>
         </div>
-        <div className="border justify-between">
-          <div className="max-w-[23px] h-1 bg-slate-800 border"></div>
-          <div>#1</div>
+
+        <div className="border flex flex-row justify-between items-center">
+          <div className="w-[283px] h-1 bg-[#EFF2F5] border"></div>
+          <div className="font-inter font-normal text-[11px] text-[#616E85] leading-[16.5px]">
+            #1
+          </div>
         </div>
+
         <div className="flex justify-between">
           <p>Volume (24h)</p>
           <p
@@ -98,6 +102,7 @@ const BitcoinCard = ({
             ${volume24h.toLocaleString()} (+{volumeChange}%)
           </p>
         </div>
+
         <div className="flex justify-between">
           <p>Volume/Market Cap (24h)</p>
           <p>3.65%</p>
