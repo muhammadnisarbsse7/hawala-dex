@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HawalaLogo } from "../assets";
+import { HawalaLogo, UpdatedLogo } from "../assets";
 import { BnbIcon } from "../SVG/BnbIcon";
 import { ArrowUpIcon } from "../SVG/ArrowUpIcon";
 import { SunIcon } from "../SVG/SunIcon";
@@ -35,7 +35,7 @@ function App() {
         <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72 ">
           <NavLink to="/">
             <img
-              src={HawalaLogo}
+              src={UpdatedLogo}
               className="block  sm:block w-auto h-20 mr-2"
               alt="Logo"
             />
