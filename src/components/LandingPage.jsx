@@ -1,5 +1,6 @@
 import React from "react";
 import BitcoinCard from "./BitCoinCard";
+import SwapCard from "./SwapBtc";
 
 const LandingPage = () => {
   const bitcoinData = {
@@ -27,7 +28,7 @@ const LandingPage = () => {
           Graph under developement
         </div>
         <div className="grid lg:col-span-3  min-h-[450px]">
-          Swap under developement
+          {/* <SwapCard /> */}
         </div>
       </div>
     </main>
