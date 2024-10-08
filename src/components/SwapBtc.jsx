@@ -8,7 +8,7 @@ const SwapCard = () => {
   const [btcAmount, setBtcAmount] = useState(0.0); // BTC input amount
   const [usdtAmount, setUsdtAmount] = useState(0.0); // USDT input amount
   const [isSwapped, setIsSwapped] = useState(false); // State to track whether fields are swapped
-  const exchangeRate = 63863.56; // Exchange rate for BTC to USDT
+  const exchangeRate = 62217.1; // Exchange rate for BTC to USDT
 
   // Update BTC and USDT amounts based on whether inputs are swapped
   const handleBtcInputChange = (e) => {
@@ -55,6 +55,7 @@ const SwapCard = () => {
           />
         ) : (
           // BTC as input by default
+
           <input
             type="number"
             value={btcAmount}
