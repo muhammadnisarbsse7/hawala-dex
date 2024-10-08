@@ -27,8 +27,8 @@ const LandingPage = () => {
         <div className="grid lg:col-span-4  min-h-[450px]">
           Graph under developement
         </div>
-        <div className="grid lg:col-span-3  min-h-[450px]">
-          {/* <SwapCard /> */}
+        <div className="grid lg:col-span-3 min-h-[450px]">
+          <SwapCard />
         </div>
       </div>
     </main>
