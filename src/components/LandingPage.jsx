@@ -1,6 +1,9 @@
 import React from "react";
 import BitcoinCard from "./BitCoinCard";
 import SwapCard from "./SwapBtc";
+import LineChart from "./MarketCapGraph";
+import ApexLineCharts from "./ChartOne";
+import SparklineChart from "./ChartTwo";
 
 const LandingPage = () => {
   const bitcoinData = {
@@ -25,7 +28,9 @@ const LandingPage = () => {
           <BitcoinCard {...bitcoinData} />
         </div>
         <div className="grid lg:col-span-4  min-h-[450px]">
-          Graph under developement
+          {/* <LineChart /> */}
+          {/* <SparklineChart />/ */}
+          <ApexLineCharts />
         </div>
         <div className="grid lg:col-span-3 min-h-[450px]">
           <SwapCard />

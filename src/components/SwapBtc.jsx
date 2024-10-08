@@ -51,7 +51,7 @@ const SwapCard = () => {
             value={usdtAmount}
             onChange={handleUsdtInputChange}
             className="w-full p-2.5 mt-1 font-montserrat font-medium text-[16px] text-[#595959] leading-[24px] border border-[#595959] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#595959]"
-            placeholder="Amount to Swap $0.00"
+            placeholder="Amount to Swap $0.0"
           />
         ) : (
           // BTC as input by default
@@ -82,7 +82,7 @@ const SwapCard = () => {
 
       {/* Display for Amount to Receive */}
       <div className="relative mb-4">
-        <div className="flex justify-end items-center gap-2 w-full p-2.5 mt-1 font-montserrat font-normal text-[16px] text-[#494949] leading-[24px] border border-[#595959] rounded-3xl text-right">
+        <div className="flex justify-between items-center gap-2 w-full p-2.5 mt-1 font-montserrat font-normal text-[16px] text-[#494949] leading-[24px] border border-[#595959] rounded-3xl text-right">
           {isSwapped ? btcAmount.toFixed(5) : usdtAmount.toFixed(2)}{" "}
           {isSwapped ? "BTC" : "USDT"} <TonIcon />
         </div>
