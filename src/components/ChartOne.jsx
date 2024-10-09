@@ -119,7 +119,7 @@ const ApexLineCharts = () => {
           </button>
         </div>
         <button className="font-inter font-medium text-[12px] text-[#616E85]  leading-[14.52px] bg-[#EFF2F5] px-10 rounded-lg">
-          Compare with
+          {/* Compare with */}
         </button>
       </div>
       {/* Timeframe buttons */}
