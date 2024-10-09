@@ -67,14 +67,14 @@ const SwapCard = () => {
         <span className="absolute right-7 top-4 text-gray-400 font-medium">
           <BitCoinIcon />
         </span>
-        <p className="text-right mt-1 text-pink-600">
+        <p className="text-right text-[12px] mt-1 text-pink-600">
           {(btcAmount || 0.00101).toFixed(5)} BTC
         </p>
       </div>
 
       {/* Swap Icon */}
       <div
-        className="flex justify-center cursor-pointer mt-"
+        className="flex justify-center cursor-pointer mb-3"
         onClick={handleSwap}
       >
         <SwaperIcon />
@@ -86,7 +86,7 @@ const SwapCard = () => {
           {isSwapped ? btcAmount.toFixed(5) : usdtAmount.toFixed(2)}{" "}
           {isSwapped ? "BTC" : "USDT"} <TonIcon />
         </div>
-        <p className="text-right mt-1 text-pink-600">
+        <p className="text-right text-[12px] mt-1 text-pink-600">
           {exchangeRate.toFixed(2)} USDT
         </p>
       </div>
