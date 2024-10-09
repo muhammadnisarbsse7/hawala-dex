@@ -40,7 +40,7 @@ const SwapCard = () => {
   return (
     <div className="w-full bg-white shadow-lg rounded-lg p-6">
       <h2 className="font-montserrat text-center text-2xl text-[#494949] font-bold mt-10">
-        Swap USDT / BTC
+        Swap {isSwapped ? "USDT / BTC" : "BTC / USDT"}
       </h2>
 
       {/* Input field for BTC or USDT Amount */}
@@ -74,11 +74,18 @@ const SwapCard = () => {
       </div>
 
       {/* Swap Icon */}
-      <div
-        className="flex justify-center cursor-pointer mb-3"
-        onClick={handleSwap}
-      >
-        <SwaperIcon />
+      <div className="flex justify-start  items-center mb-5 ">
+        <div className="relative ">
+          <div className="flex w-2\80 p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#595959] opacity-50 gap-2 leading-[24px] text-center ">
+            BTC ${exchangeRate}
+          </div>
+        </div>
+        <div
+          className="flex justify-center cursor-pointer ml-8"
+          onClick={handleSwap}
+        >
+          <SwaperIcon />
+        </div>
       </div>
 
       {/* Display for Amount to Receive */}
@@ -96,11 +103,11 @@ const SwapCard = () => {
       </div>
 
       {/* Current Exchange Rate Display */}
-      <div className="relative mb-6">
+      {/* <div className="relative mb-6">
         <div className="flex w-full p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#595959] opacity-50 gap-2 leading-[24px] text-center border border-[#595959] rounded-3xl">
           <div>Current Exchange Rate</div> ${exchangeRate}
         </div>
-      </div>
+      </div> */}
 
       {/* Swap Button */}
       <button
@@ -113,7 +120,7 @@ const SwapCard = () => {
           )
         }
       >
-        SWAP BTC <SwapArrowIcon />
+        SWAP
       </button>
     </div>
   );

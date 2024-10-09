@@ -102,20 +102,14 @@ const ApexLineCharts = () => {
     <div className="w-full mx-auto bg-white shadow-lg p-6 rounded-lg ">
       {/* Title */}
       <div className="flex justify-between mb-4">
-        <div className="flex items-center space-x-4 py-1.5 border bg-[#EFF2F5] rounded-[8px] px-2">
+        {/* <div className="flex items-center space-x-4 py-1.5 border bg-[#EFF2F5] rounded-[8px] px-2">
           <button className="font-inter font-medium text-[12px] text-[#616E85] leading-[24px] bg-white rounded-[6px] px-1">
             Price
           </button>
           <button className="font-inter font-medium text-[12px] text-[#616E85] leading-6  ">
             Market Cap
           </button>
-        </div>
-        <button className="font-inter font-medium text-[12px] text-[#616E85] leading-[14.52px] bg-[#EFF2F5] px-10 rounded-lg">
-          Compare with
-        </button>
-      </div>
-      {/* Timeframe buttons */}
-      <div className="flex justify-between mt-4 space-x-4">
+        </div> */}
         <div className="flex items-center space-x-4 py-1.5 border bg-[#EFF2F5] rounded-[8px] px-2">
           <button className="font-inter font-medium text-[12px] text-[#616E85] leading-[24px] bg-white rounded-[6px] px-1">
             <LineChartIcon />
@@ -124,6 +118,20 @@ const ApexLineCharts = () => {
             <MarketCapIcon />
           </button>
         </div>
+        <button className="font-inter font-medium text-[12px] text-[#616E85]  leading-[14.52px] bg-[#EFF2F5] px-10 rounded-lg">
+          Compare with
+        </button>
+      </div>
+      {/* Timeframe buttons */}
+      <div className="flex justify-end mt-4 space-x-4">
+        {/* <div className="flex items-center space-x-4 py-1.5 border bg-[#EFF2F5] rounded-[8px] px-2">
+          <button className="font-inter font-medium text-[12px] text-[#616E85] leading-[24px] bg-white rounded-[6px] px-1">
+            <LineChartIcon />
+          </button>
+          <button className="font-inter font-medium text-[12px] text-[#616E85] leading-6  ">
+            <MarketCapIcon />
+          </button>
+        </div> */}
         <div className="bg-[#EFF2F5] px-2 rounded-lg space-x-3 py-1">
           <button className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px] bg-white p-1.5 rounded-lg">
             1D

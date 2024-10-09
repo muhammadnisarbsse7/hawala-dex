@@ -27,13 +27,13 @@ const LandingPage = () => {
         <div className="grid lg:col-span-3  min-h-[450px] ">
           <BitcoinCard {...bitcoinData} />
         </div>
+        <div className="grid lg:col-span-3 min-h-[450px]">
+          <SwapCard />
+        </div>
         <div className="grid lg:col-span-4  min-h-[450px]">
           {/* <LineChart /> */}
           {/* <SparklineChart />/ */}
           <ApexLineCharts />
-        </div>
-        <div className="grid lg:col-span-3 min-h-[450px]">
-          <SwapCard />
         </div>
       </div>
     </main>
