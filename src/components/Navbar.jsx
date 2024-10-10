@@ -40,9 +40,9 @@ function App() {
               alt="Logo"
             />
           </NavLink>
-          <div className="font-poppins font-semibold text-[24px] text-[#494949] leading-9">
+          <div className="font-poppins font-semibold min-[320px]:text-[18px] min-[320px]:leading-7  lg:text-[24px] text-[#494949] lg:leading-9">
             Hawala{" "}
-            <span className="font-poppins font-semibold text-[24px] text-[#FF3389] leading-9 ">
+            <span className="font-poppins font-semibold  min-[320px]:text-[18px] min-[320px]:leading-7   lg:text-[24px] text-[#FF3389] lg:leading-9 ">
               Dex
             </span>
           </div>
