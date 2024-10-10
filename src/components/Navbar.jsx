@@ -40,6 +40,12 @@ function App() {
               alt="Logo"
             />
           </NavLink>
+          <div className="font-poppins font-semibold text-[24px] text-[#494949] leading-9">
+            Hawala{" "}
+            <span className="font-poppins font-semibold text-[24px] text-[#FF3389] leading-9 ">
+              Dex
+            </span>
+          </div>
         </div>
         <div className="block lg:hidden">
           <button
