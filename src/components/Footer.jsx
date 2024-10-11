@@ -5,7 +5,7 @@ const Footer = () => {
     <main>
       <div className="h-full w-full bg-white drop-shadow-2xl ">
         <div className="lg:flex lg:flex-row flex border-b-2 gap-4 flex-wrap justify-between sm:justify-between md:justify-between lg:justify-between py-7 mx-5 md:mx-40 lg:mx-80">
-          <div className="flex flex-col ">
+          <div className="flex flex-col border ">
             <h1 className="font-inter font-bold text-[14px] text-[#494949] leading-7 ">
               Legal Docs
             </h1>
