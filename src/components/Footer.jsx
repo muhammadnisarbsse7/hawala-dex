@@ -57,7 +57,7 @@ const Footer = () => {
           Copyright{" "}
           <span className="font-inter font-medium text-[12px] leading-[14.52px] text-[#FF3389]">
             {" "}
-            @HawalaDEX20245
+            @HawalaDEX2024
           </span>
         </div>
       </div>
