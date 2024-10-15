@@ -12,7 +12,7 @@ function App() {
     // Simulate a delay to show the spinner (you can replace it with actual API calls or async logic)
     setTimeout(() => {
       setLoading(false); // Set loading to false after the app has loaded
-    }, 2000); // 2 seconds delay for demonstration
+    }, 2000);
   }, []);
 
   return (
