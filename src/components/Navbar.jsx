@@ -9,6 +9,9 @@ import { EthIcon } from "../SVG/ETHIcon";
 import { TonIcon } from "../SVG/TonIcon";
 import { CrossIcon } from "../SVG/CrossIcon";
 import { TickIcon } from "../SVG/TickIcon";
+import { BitCoinIcon } from "../SVG/BitCoinIcon";
+import { BtcIcon } from "../SVG/WhiteBTCIcon";
+import { UsdtIcon } from "../SVG/USDTIcon";
 // import { CrossIcon } from "../SVG/CrossIcon"; // Assuming CrossIcon exists
 
 function App() {
@@ -98,9 +101,10 @@ function App() {
                 className="w-[127px] lg:w-auto block mt-4 p-3 rounded-xl space-x-3 bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0 lg:mr-4"
               >
                 <div className="flex font-inter text-[12px] lg:text-[16px] leading-[19.36px] text-white flex-row items-center gap-2">
-                  <EthIcon />
-                  ETH Chain
-                  <ArrowUpIcon />
+                  {/* <BitCoinIcon /> */}
+                  <BtcIcon />
+                  Connect BTC Wallet
+                  {/* <ArrowUpIcon /> */}
                 </div>
               </button>
               {isUsdtOpen && (
@@ -119,6 +123,7 @@ function App() {
               className="w-[127px] lg:w-auto lg:py-3 lg:mr-4 block mt-4 py-3 px-4 font-inter font-medium text-[12px] lg:text-[16px] leading-[14.52px] lg:leading-[19.36px] text-white rounded-xl bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0"
             >
               <div className="flex flex-row items-center gap-2">
+                <UsdtIcon />
                 Connect Wallet
               </div>
             </button>

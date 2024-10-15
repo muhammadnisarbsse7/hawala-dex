@@ -6,7 +6,7 @@ import LandingPage from "./components/LandingPage";
 import { TonIcon } from "./SVG/TonIcon";
 
 function App() {
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate a delay to show the spinner (you can replace it with actual API calls or async logic)
