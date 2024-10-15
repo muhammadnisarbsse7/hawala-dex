@@ -5,14 +5,19 @@ import { DiscordIcon } from "../SVG/SocialLinks/DiscordIcon";
 import { MediumIcon } from "../SVG/SocialLinks/MediumIcon";
 
 const Footer = () => {
+  const pdfpath = "/Whitepaper.pdf";
+
   return (
     <main>
       <div className="h-full w-full bg-white drop-shadow-2xl ">
         <div className="flex flex-wrap justify-center  sm:justify-between items-center border-b-2 py-7 mx-5 sm:mx-10 md:mx-20 lg:mx-40 xl:mx-60 gap-4">
           <div className="flex flex-wrap gap-6 md:gap-8 lg:gap-10">
-            <p className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] leading-7">
+            <button
+              onClick={() => window.open(pdfpath, "_blank")}
+              className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] leading-7"
+            >
               WhitePaper
-            </p>
+            </button>
             <p className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] leading-7">
               Terms And Condition
             </p>
