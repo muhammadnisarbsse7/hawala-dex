@@ -120,11 +120,11 @@ function App() {
             {/* Wallet Modal Button */}
             <button
               onClick={() => setIsWalletModalOpen(!isWalletModalOpen)}
-              className="w-[127px] lg:w-auto lg:py-3 lg:mr-4 block mt-4 py-3 px-4 font-inter font-medium text-[12px] lg:text-[16px] leading-[14.52px] lg:leading-[19.36px] text-white rounded-xl bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0"
+              className="w-[127px] lg:w-auto lg:py-3 lg:mr-3 block mt-4 py-3 px-4 font-inter font-medium text-[12px] lg:text-[16px] leading-[14.52px] lg:leading-[19.36px] text-white rounded-xl bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0"
             >
               <div className="flex flex-row items-center gap-2">
                 <UsdtIcon />
-                Connect Wallet
+                Connect USDT Wallet{" "}
               </div>
             </button>
 
@@ -147,7 +147,7 @@ function App() {
           className={`absolute top-[192px]  lg:top-[70px] mt-2 left-1/2 transform -translate-x-1/2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50 
       transition-all duration-300 ease-out scale-95 opacity-0 
       ${isWalletModalOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
-      lg:left-auto lg:transform-none lg:right-6`}
+      lg:left-auto lg:transform-none lg:right-24`}
         >
           {" "}
           {/* Header */}
