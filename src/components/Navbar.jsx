@@ -44,7 +44,7 @@ function App() {
             />
           </NavLink>
           <div className="font-poppins font-semibold min-[320px]:text-[18px] min-[320px]:leading-7  lg:text-[24px] text-[#494949] lg:leading-9">
-            Hawala{" "}
+            Hawala
             <span className="font-poppins font-semibold  min-[320px]:text-[18px] min-[320px]:leading-7   lg:text-[24px] text-[#FF3389] lg:leading-9 ">
               Dex
             </span>
