@@ -108,13 +108,23 @@ const ApexLineCharts = () => {
       labels: {
         // Update label color dynamically based on dark mode
         style: {
-          colors: isDarkModeActive ? "#ffffff" : "#000000", // Green for dark mode, black for light mode
+          colors: isDarkModeActive ? "#22C55E" : "#000000", // Green for dark mode, black for light mode
         },
         formatter: (value) => `$${value.toLocaleString()}`,
       },
     },
     grid: {
       borderColor: "#e7e7e7",
+      xaxis: {
+        lines: {
+          show: false, // Hide x-axis grid lines
+        },
+      },
+      yaxis: {
+        lines: {
+          show: false, // Hide x-axis grid lines
+        },
+      },
     },
     tooltip: {
       x: {

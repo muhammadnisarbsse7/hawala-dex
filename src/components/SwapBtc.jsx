@@ -38,7 +38,7 @@ const SwapCard = () => {
   };
 
   return (
-    <div className="w-full bg-none rounded-lg p-6">
+    <div className="w-full bg-none rounded-lg p-6 dark:bg-[#0D1421] dark:drop-shadow-xl dark:opacity-70 ">
       <h2 className="font-montserrat text-center text-2xl text-[#494949] dark:text-white font-bold mt-10">
         Swap {isSwapped ? "USDT / BTC" : "BTC / USDT"}
       </h2>
