@@ -38,8 +38,8 @@ const SwapCard = () => {
   };
 
   return (
-    <div className="w-full bg-white shadow-lg rounded-lg p-6">
-      <h2 className="font-montserrat text-center text-2xl text-[#494949] font-bold mt-10">
+    <div className="w-full bg-none rounded-lg p-6">
+      <h2 className="font-montserrat text-center text-2xl text-[#494949] dark:text-white font-bold mt-10">
         Swap {isSwapped ? "USDT / BTC" : "BTC / USDT"}
       </h2>
 
@@ -51,7 +51,7 @@ const SwapCard = () => {
             type="number"
             value={usdtAmount}
             onChange={handleUsdtInputChange}
-            className="w-full p-2.5 mt-1 font-montserrat font-medium text-[16px] text-[#595959] leading-[24px] border border-[#595959] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#595959]"
+            className="w-full p-2.5 mt-1 font-montserrat font-medium text-[16px] text-[#595959] dark:text-white dark:border-white dark:bg-[#0D1421] leading-[24px] border border-[#595959] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#595959]"
             placeholder="Amount to Swap $0.0"
           />
         ) : (
@@ -61,7 +61,7 @@ const SwapCard = () => {
             type="number"
             value={btcAmount}
             onChange={handleBtcInputChange}
-            className="w-full p-2.5 mt-1 font-montserrat font-medium text-[16px] text-[#595959] leading-[24px] border border-[#595959] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#595959]"
+            className="w-full p-2.5 mt-1 font-montserrat font-medium text-[16px] text-[#595959] dark:text-white leading-[24px] border border-[#595959]  dark:bg-[#0D1421] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#595959]"
             placeholder="Amount to Swap $0.00"
           />
         )}
@@ -76,7 +76,7 @@ const SwapCard = () => {
       {/* Swap Icon */}
       <div className="flex justify-start  items-center mb-5 ">
         <div className="relative ">
-          <div className="flex w-2\80 p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#595959] opacity-50 gap-2 leading-[24px] text-center ">
+          <div className="flex w-2\80 p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#595959] dark:text-white  dark:opacity-100 opacity-50 gap-2 leading-[24px] text-center ">
             BTC ${exchangeRate}
           </div>
         </div>
@@ -90,7 +90,7 @@ const SwapCard = () => {
 
       {/* Display for Amount to Receive */}
       <div className="relative mb-4">
-        <div className="flex justify-between items-center gap-2 w-full p-2.5 mt-1 font-montserrat font-normal text-[16px] text-[#494949] leading-[24px] border border-[#595959] rounded-3xl text-right">
+        <div className="flex justify-between items-center gap-2 w-full p-2.5 mt-1 font-montserrat font-normal text-[16px] text-[#494949] dark:text-white leading-[24px] border border-white dark:bg-[#0D1421] rounded-3xl text-right">
           {isSwapped ? btcAmount.toFixed(5) : usdtAmount.toFixed(2)}{" "}
           {isSwapped ? "BTC" : "USDT"}{" "}
           <span className="absolute right-7  text-gray-400 font-medium ">

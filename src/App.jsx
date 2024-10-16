@@ -7,6 +7,19 @@ import { TonIcon } from "./SVG/TonIcon";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark"
+  );
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
 
   useEffect(() => {
     // Simulate a delay to show the spinner (you can replace it with actual API calls or async logic)
@@ -17,7 +30,11 @@ function App() {
 
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div
+        className={`flex flex-col min-h-screen dark:bg-[#0D1421] ${
+          darkMode ? "dark" : ""
+        }`}
+      >
         {loading ? (
           // Spinner loader
           <div className="flex justify-center items-center h-screen">
@@ -28,7 +45,7 @@ function App() {
         ) : (
           // Content to show when app has finished loading
           <>
-            <Navbar />
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <div className="flex-grow">
               <Routes>
                 <Route path="/" element={<LandingPage />} />

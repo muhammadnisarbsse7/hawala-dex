@@ -4,6 +4,7 @@ import SwapCard from "./SwapBtc";
 import LineChart from "./MarketCapGraph";
 import ApexLineCharts from "./ChartOne";
 import SparklineChart from "./ChartTwo";
+import BgImage from "../assets/BgImage.png";
 
 const LandingPage = () => {
   const bitcoinData = {
@@ -20,8 +21,8 @@ const LandingPage = () => {
 
   return (
     <main
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/asset/BgImage.png')" }}
+      className="h-screen bg-cover bg-center  bg-no-repeat border-t-2 border-white dark:border-[#00000040] "
+      style={{ backgroundImage: `url(${BgImage})` }}
     >
       <div className="grid lg:grid-cols-10  lg:gap-7 my-28 ">
         <div className="grid lg:col-span-3  min-h-[450px] ">

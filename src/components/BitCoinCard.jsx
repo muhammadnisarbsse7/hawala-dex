@@ -19,7 +19,7 @@ const BitcoinCard = ({
   fullyDilutedMarketCap,
 }) => {
   return (
-    <div className="w-full mx-auto bg-white shadow-lg rounded-lg p-2 sm:p-2 ">
+    <div className="w-full mx-auto bg-none  rounded-lg p-2 sm:p-2 ">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <img
@@ -27,9 +27,9 @@ const BitcoinCard = ({
             alt="Bitcoin"
             className="w-8 h-8 mr-2"
           />
-          <h1 className="font-inter font-semibold text-[18px] text-[#0D1421] leading-[21.78px] ">
-            Bitcoin{" "}
-            <span className="font-inter font-normal text-[12px] text-[#616E85] leading-[18px]">
+          <h1 className="font-inter font-semibold text-[18px] text-[#0D1421] dark:text-white leading-[21.78px] ">
+            Bitcoin
+            <span className="font-inter font-normal text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               BTC
             </span>{" "}
           </h1>
@@ -63,7 +63,7 @@ const BitcoinCard = ({
       <div className="space-y-2  mt-16">
         <div className="flex justify-between">
           <div className="flex items-center gap-1">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85]   dark:text-white leading-[18px]">
               Market Cap
             </p>
             <div>
@@ -79,7 +79,7 @@ const BitcoinCard = ({
               className={`${
                 marketCap < 0
                   ? "text-red-500"
-                  : "font-inter font-semibold text-[12px] text-[#0D1421] leading-[18px]"
+                  : "font-inter font-semibold text-[12px] text-[#0D1421]  dark:text-white leading-[18px]"
               }`}
             >
               ${marketCap.toLocaleString()}
@@ -89,14 +89,14 @@ const BitcoinCard = ({
 
         <div className=" flex flex-row justify-between items-center">
           <div className="w-[283px] h-1 rounded-[7px] bg-[#EFF2F5] border"></div>
-          <div className="font-inter font-normal text-[11px] text-[#616E85] leading-[16.5px]">
+          <div className="font-inter font-normal text-[11px] text-[#616E85] dark:text-white leading-[16.5px]">
             #1
           </div>
         </div>
 
         <div className="flex justify-between">
           <div className=" flex items-center gap-[3px]">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               Volume (24h)
             </p>
             <ExclamationIcon />
@@ -105,7 +105,7 @@ const BitcoinCard = ({
           <p
             className={`${
               volumeChange > 0
-                ? "font-inter font-semibold text-[11px] text-[#16C784] leading-[16px]"
+                ? "font-inter font-semibold text-[11px] text-[#16C784]  leading-[16px]"
                 : "text-red-500"
             }`}
           >
@@ -115,75 +115,75 @@ const BitcoinCard = ({
 
         <div className=" flex flex-row justify-between items-center">
           <div className="w-[283px] h-1 rounded-[7px] bg-[#EFF2F5] border"></div>
-          <div className="font-inter font-normal text-[11px] text-[#616E85] leading-[16.5px]">
+          <div className="font-inter font-normal text-[11px] text-[#616E85] dark:text-white leading-[16.5px]">
             #2
           </div>
         </div>
 
         <div className="flex justify-between">
           <div className=" flex items-center gap-[3px]">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               Volume/Market cap (24h)
             </p>
             <ExclamationIcon />
             {/* <GreaterIcon /> */}
           </div>
-          <p className="font-inter font-semibold text-[12px] text-[#0D1421] leading-[18px]">
+          <p className="font-inter font-semibold text-[12px] text-[#0D1421] dark:text-white leading-[18px]">
             3.65%
           </p>
         </div>
 
         <div className="flex justify-between">
           <div className=" flex items-center gap-[3px]">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               Circulating supply
             </p>
             <VerifiedIcon />
             <ExclamationIcon />
           </div>
-          <p className="font-inter font-semibold text-[12px] text-[#0D1421] leading-[18px]">
+          <p className="font-inter font-semibold text-[12px] text-[#0D1421] dark:text-white leading-[18px]">
             19,761,509 BTC
           </p>
         </div>
 
         <div className=" flex flex-row justify-between items-center">
           <div className="w-[283px] h-1 rounded-[7px] bg-[#EFF2F5] border"></div>
-          <div className="font-inter font-normal text-[11px] text-[#616E85] leading-[16.5px]">
+          <div className="font-inter font-normal text-[11px] text-[#616E85] dark:text-white leading-[16.5px]">
             04.10%
           </div>
         </div>
 
         <div className="flex justify-between">
           <div className=" flex items-center gap-[3px]">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               Total supply
             </p>
             <ExclamationIcon />
           </div>
-          <p className="font-inter font-semibold text-[12px] text-[#0D1421] leading-[18px]">
+          <p className="font-inter font-semibold text-[12px] text-[#0D1421] dark:text-white leading-[18px]">
             19,761,509 BTC
           </p>
         </div>
 
         <div className="flex justify-between">
           <div className=" flex items-center gap-[3px]">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               Max. supply
             </p>
             <ExclamationIcon />
           </div>
-          <p className="font-inter font-semibold text-[12px] text-[#0D1421] leading-[18px]">
+          <p className="font-inter font-semibold text-[12px] text-[#0D1421] dark:text-white leading-[18px]">
             21,000,000 BTC
           </p>
         </div>
         <div className="flex justify-between">
           <div className=" flex items-center gap-[3px]">
-            <p className="font-inter font-medium text-[12px] text-[#616E85] leading-[18px]">
+            <p className="font-inter font-medium text-[12px] text-[#616E85] dark:text-white leading-[18px]">
               Fully diluted market cap
             </p>
             <ExclamationIcon />
           </div>
-          <p className="font-inter font-semibold text-[12px] text-[#0D1421] leading-[18px]">
+          <p className="font-inter font-semibold text-[12px] text-[#0D1421] dark:text-white leading-[18px]">
             $1,302,769,739,543
           </p>
         </div>

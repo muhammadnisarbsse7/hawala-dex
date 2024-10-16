@@ -14,7 +14,7 @@ import { BtcIcon } from "../SVG/WhiteBTCIcon";
 import { UsdtIcon } from "../SVG/USDTIcon";
 // import { CrossIcon } from "../SVG/CrossIcon"; // Assuming CrossIcon exists
 
-function App() {
+function Navbar({ darkMode, setDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isUsdtOpen, setIsUsdtOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false); // State for Wallet Modal
@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       {/* Navbar */}
-      <nav className="flex items-center justify-between flex-wrap p-2 drop-shadow-lg border-b-4 border-white">
+      <nav className="flex items-center justify-between flex-wrap p-2 drop-shadow-lg border-b-4 border-white dark:border-[#0D1421] dark:bg-[#0D1421]">
         <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72 ">
           <NavLink to="/">
             <img
@@ -43,7 +43,7 @@ function App() {
               alt="Logo"
             />
           </NavLink>
-          <div className="font-poppins font-semibold min-[320px]:text-[18px] min-[320px]:leading-7  lg:text-[24px] text-[#494949] lg:leading-9">
+          <div className="font-poppins font-semibold min-[320px]:text-[18px] min-[320px]:leading-7  lg:text-[24px] text-[#494949] lg:leading-9 dark:text-white ">
             Hawala
             <span className="font-poppins font-semibold  min-[320px]:text-[18px] min-[320px]:leading-7   lg:text-[24px] text-[#FF3389] lg:leading-9 ">
               DEX
@@ -128,15 +128,15 @@ function App() {
               </div>
             </button>
 
-            <button
-              href="#"
-              className="w-[127px] lg:w-auto lg:px-0 block mt-4 py-2.5 px-2 rounded-xl bg-[#FF3389] hover:bg-[#FF2070] lg:inline-block lg:mt-0 text-white-200 lg:mr-4"
-            >
-              <div className="flex flex-row px-3 justify-between items-center gap-2">
-                <SunIcon />
-                <MoonIcon />
-              </div>
-            </button>
+            {/* Dark Mode Toggle */}
+            <div className="mt-4 lg:mt-0 lg:ml-4">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="p-3 bg-[#FF3389] hover:bg-[#FF2070] rounded-full text-white"
+              >
+                {darkMode ? <SunIcon /> : <MoonIcon />}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -271,4 +271,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navbar;

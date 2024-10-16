@@ -99,7 +99,7 @@ const ApexLineCharts = () => {
   });
 
   return (
-    <div className="w-full mx-auto bg-white shadow-lg p-6 rounded-lg ">
+    <div className="w-full mx-auto bg-none p-6 rounded-lg ">
       {/* Title */}
       <div className="flex justify-between mb-4">
         {/* <div className="flex items-center space-x-4 py-1.5 border bg-[#EFF2F5] rounded-[8px] px-2">
