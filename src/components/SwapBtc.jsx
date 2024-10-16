@@ -90,7 +90,7 @@ const SwapCard = () => {
 
       {/* Display for Amount to Receive */}
       <div className="relative mb-4">
-        <div className="flex justify-between items-center gap-2 w-full p-2.5 mt-1 font-montserrat font-normal text-[16px] text-[#494949] dark:text-white leading-[24px] border border-white dark:bg-[#0D1421] rounded-3xl text-right">
+        <div className="flex justify-between items-center gap-2 w-full p-2.5 mt-1 font-montserrat font-normal text-[16px] text-[#494949] dark:text-white leading-[24px] border border-[#595959] dark:bg-[#0D1421] rounded-3xl text-right">
           {isSwapped ? btcAmount.toFixed(5) : usdtAmount.toFixed(2)}{" "}
           {isSwapped ? "BTC" : "USDT"}{" "}
           <span className="absolute right-7  text-gray-400 font-medium ">
