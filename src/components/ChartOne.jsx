@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
 import { LineChartIcon } from "../SVG/LineChartIcon";
 import { MarketCapIcon } from "../SVG/MarketCapIcon";
 
 const ApexLineCharts = () => {
+  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
+
+  // Detect dark mode and update chart options
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDarkModeActive(document.documentElement.classList.contains("dark"));
+    };
+    checkDarkMode(); // Check initially
+
+    // Add event listener for dark mode changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => {
+      observer.disconnect(); // Clean up observer when component unmounts
+    };
+  }, []);
+
   const [series] = useState([
     {
       name: "Price",
@@ -85,6 +106,10 @@ const ApexLineCharts = () => {
     },
     yaxis: {
       labels: {
+        // Update label color dynamically based on dark mode
+        style: {
+          colors: isDarkModeActive ? "#ffffff" : "#000000", // Green for dark mode, black for light mode
+        },
         formatter: (value) => `$${value.toLocaleString()}`,
       },
     },
