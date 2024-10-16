@@ -1,3 +1,5 @@
+// Hawala Navbar
+
 import React, { useState } from "react";
 import { HawalaLogo, UpdatedLogo } from "../assets";
 import { BnbIcon } from "../SVG/BnbIcon";
@@ -50,6 +52,7 @@ function Navbar({ darkMode, setDarkMode }) {
             </span>
           </div>
         </div>
+
         <div className="block lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
