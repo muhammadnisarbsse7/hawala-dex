@@ -147,7 +147,7 @@ function Navbar({ darkMode, setDarkMode }) {
           className={`absolute top-[192px]  lg:top-[70px] mt-2 left-1/2 transform -translate-x-1/2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50 
       transition-all duration-300 ease-out scale-95 opacity-0 
       ${isWalletModalOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"}
-      lg:left-auto lg:transform-none lg:right-24`}
+      lg:left-auto lg:transform-none lg:right-20`}
         >
           {" "}
           {/* Header */}

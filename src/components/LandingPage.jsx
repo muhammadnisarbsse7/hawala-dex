@@ -21,7 +21,7 @@ const LandingPage = () => {
 
   return (
     <main
-      className="min-h-screen bg-cover bg-center  bg-no-repeat border-t-2 border-white dark:border-[#00000040] "
+      className="min-h-screen bg-cover bg-center  bg-no-repeat border-t-2 border-white dark:border-[#0D1421] "
       style={{ backgroundImage: `url(${BgImage})` }}
     >
       <div className="grid lg:grid-cols-10  lg:gap-7 my-28 ">
