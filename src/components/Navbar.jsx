@@ -58,7 +58,7 @@ function Navbar({ darkMode, setDarkMode }) {
           >
             <BtcIcon />
             <span className="text-[6px] sm:text-[12px] lg:text-[16px]">
-              Connect BTC Wallet
+              Connect BTC
             </span>
           </button>
           {isUsdtOpen && (
@@ -77,7 +77,7 @@ function Navbar({ darkMode, setDarkMode }) {
           >
             <UsdtIcon />
             <span className="text-[6px] sm:text-[12px] lg:text-[16px]">
-              Connect USDT Wallet
+              Connect USDT
             </span>
           </button>
 
