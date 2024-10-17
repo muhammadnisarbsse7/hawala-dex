@@ -62,8 +62,8 @@ function Navbar({ darkMode, setDarkMode }) {
             </span>
           </button>
           {isUsdtOpen && (
-            <div className="absolute top-[65px] right-[148px] sm:right-[238px] sm:top-[80px] w-[87px]  sm:w-[166px]  lg:w-[200px] lg:right-[307px] bg-white rounded-xl shadow-lg">
-              <button className="w-full px-2 py-1.5  sm:p-3 rounded-xl font-inter font-normal text-[10px] sm:text-[16px] text-[#494949] leading-[19.36px] flex items-start justify-start gap-2 hover:bg-[#FF2070]">
+            <div className="absolute top-[65px] right-[125px] sm:right-[198px] sm:top-[80px] w-[72px]  sm:w-[130px]  lg:w-[154px] lg:right-[250px] bg-white rounded-xl shadow-lg">
+              <button className="w-full px-2 py-1  sm:p-3 rounded-xl font-inter font-normal text-[10px] sm:text-[16px] text-[#494949] leading-[19.36px] flex items-start justify-start gap-2 hover:bg-[#FF2070]">
                 <TonIcon />
                 USDT
               </button>
@@ -93,7 +93,7 @@ function Navbar({ darkMode, setDarkMode }) {
 
       {/* Wallet Modal */}
       {isWalletModalOpen && (
-        <div className="absolute top-[192px] lg:top-[70px] mt-2 left-1/2 transform -translate-x-1/2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50 lg:left-auto lg:transform-none lg:right-12 dark:lg:right-14">
+        <div className="absolute top-[192px] lg:top-[70px] mt-2 left-1/2 transform -translate-x-1/2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50 lg:left-auto lg:transform-none lg:right-[1px] dark:lg:right-[1px]">
           <div className="flex justify-between items-center mb-4">
             <h2 className="font-inter font-semibold text-[14px] leading-[12.6px] text-[#FF3389]">
               Your Wallet
