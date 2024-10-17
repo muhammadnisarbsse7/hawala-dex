@@ -21,19 +21,36 @@ const LandingPage = () => {
 
   return (
     <main
-      className="min-h-screen bg-cover bg-center  bg-no-repeat border-t-2 border-white dark:border-[#0D1421] "
+      className="min-h-screen bg-cover bg-center bg-no-repeat border-t-2 border-white dark:border-[#0D1421]"
       style={{ backgroundImage: `url(${BgImage})` }}
     >
-      <div className="grid lg:grid-cols-10  lg:gap-7 my-28 ">
-        <div className="grid lg:col-span-3  min-h-[450px] ">
+      {/* Mobile layout */}
+      <div className="grid lg:hidden gap-7 my-28">
+        {/* Swap Card - Displayed first on mobile */}
+        <div className="grid min-h-[450px]">
+          <SwapCard />
+        </div>
+
+        {/* Bitcoin Data - Displayed second on mobile */}
+        <div className="grid min-h-[450px]">
+          <BitcoinCard {...bitcoinData} />
+        </div>
+
+        {/* Price Chart - Displayed last on mobile */}
+        <div className="grid min-h-[450px]">
+          <ApexLineCharts />
+        </div>
+      </div>
+
+      {/* Larger screen layout (unchanged from original) */}
+      <div className="hidden lg:grid lg:grid-cols-10 lg:gap-7 my-28">
+        <div className="grid lg:col-span-3 min-h-[450px]">
           <BitcoinCard {...bitcoinData} />
         </div>
         <div className="grid lg:col-span-3 min-h-[450px]">
           <SwapCard />
         </div>
-        <div className="grid lg:col-span-4  min-h-[450px]">
-          {/* <LineChart /> */}
-          {/* <SparklineChart />/ */}
+        <div className="grid lg:col-span-4 min-h-[450px]">
           <ApexLineCharts />
         </div>
       </div>

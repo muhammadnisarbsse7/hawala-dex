@@ -4,6 +4,9 @@ import { SwaperIcon } from "../SVG/SwaperIcon";
 import { TonIcon } from "../SVG/TonIcon";
 import { SwapArrowIcon } from "../SVG/SwapArrowIcon";
 import { SwapTonIcon } from "../SVG/SwapTonIcon";
+import { BtcIcon } from "../SVG/WhiteBTCIcon";
+import { UsdtIcon } from "../SVG/USDTIcon";
+// import { BitCoinIconUpdated } from "../SVG/BitcoinIconUpdated";
 
 const SwapCard = () => {
   const [btcAmount, setBtcAmount] = useState(0.0); // BTC input amount
@@ -66,7 +69,7 @@ const SwapCard = () => {
           />
         )}
         <span className="absolute right-7 top-4 text-gray-400 font-medium">
-          {isSwapped ? <SwapTonIcon /> : <BitCoinIcon />}
+          {isSwapped ? <UsdtIcon /> : <BtcIcon />}
         </span>
         <p className="text-right text-[12px] mt-1 text-pink-600">
           {(btcAmount || 0.00101).toFixed(5)} BTC
@@ -94,7 +97,7 @@ const SwapCard = () => {
           {isSwapped ? btcAmount.toFixed(5) : usdtAmount.toFixed(2)}{" "}
           {isSwapped ? "BTC" : "USDT"}{" "}
           <span className="absolute right-7  text-gray-400 font-medium ">
-            {isSwapped ? <BitCoinIcon /> : <SwapTonIcon />}
+            {isSwapped ? <BtcIcon /> : <UsdtIcon />}
           </span>
         </div>
         <p className="text-right text-[12px] mt-1 text-pink-600">
