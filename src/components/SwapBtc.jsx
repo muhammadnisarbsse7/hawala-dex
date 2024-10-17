@@ -72,7 +72,9 @@ const SwapCard = () => {
           {isSwapped ? <UsdtIcon /> : <BtcIcon />}
         </span>
         <p className="text-right text-[12px] mt-1 text-pink-600">
-          {(btcAmount || 0.00101).toFixed(5)} {isSwapped ? "USDT" : "BTC"}
+          {isSwapped
+            ? `${exchangeRate.toFixed(2)} USDT`
+            : `BTC $${btcAmount.toFixed(5)}`}
         </p>
       </div>
 
