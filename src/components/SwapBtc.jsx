@@ -104,7 +104,7 @@ const SwapCard = () => {
         </div>
         <p className="text-right text-[12px] mt-1 text-pink-600">
           {isSwapped
-            ? `BTC $${exchangeRate}`
+            ? `BTC $${btcAmount.toFixed(5)}`
             : `${exchangeRate.toFixed(2)} USDT`}
         </p>
       </div>
