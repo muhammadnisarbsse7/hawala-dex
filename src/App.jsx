@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import { TonIcon } from "./SVG/TonIcon";
+import { Wallet } from "ethers";
+import WalletConnect from "./components/Wallet";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +54,8 @@ function App() {
               </Routes>
             </div>
             <Footer />
+            {/* <Wallet/> */}
+            {/* <WalletConnect /> */}
           </>
         )}
       </div>

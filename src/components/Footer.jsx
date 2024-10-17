@@ -19,7 +19,7 @@ const Footer = () => {
               WhitePaper
             </button>
             <p className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] dark:text-white leading-7">
-              Terms And Condition
+              Terms & Conditions
             </p>
             <p className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] dark:text-white leading-7">
               FAQ
