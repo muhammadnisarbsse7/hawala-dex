@@ -72,7 +72,7 @@ const SwapCard = () => {
           {isSwapped ? <UsdtIcon /> : <BtcIcon />}
         </span>
         <p className="text-right text-[12px] mt-1 text-pink-600">
-          {(btcAmount || 0.00101).toFixed(5)} BTC
+          {(btcAmount || 0.00101).toFixed(5)} {isSwapped ? "USDT" : "BTC"}
         </p>
       </div>
 
@@ -80,7 +80,9 @@ const SwapCard = () => {
       <div className="flex justify-start  items-center mb-5 ">
         <div className="relative ">
           <div className="flex w-2\80 p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#595959] dark:text-white  dark:opacity-100 opacity-50 gap-2 leading-[24px] text-center ">
-            BTC ${exchangeRate}
+            {isSwapped
+              ? `${exchangeRate.toFixed(2)} USDT`
+              : `BTC $${exchangeRate}`}
           </div>
         </div>
         <div
@@ -101,7 +103,9 @@ const SwapCard = () => {
           </span>
         </div>
         <p className="text-right text-[12px] mt-1 text-pink-600">
-          {exchangeRate.toFixed(2)} USDT
+          {isSwapped
+            ? `BTC $${exchangeRate}`
+            : `${exchangeRate.toFixed(2)} USDT`}
         </p>
       </div>
 
