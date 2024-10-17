@@ -24,6 +24,9 @@ const Footer = () => {
             <p className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] dark:text-white leading-7">
               FAQ
             </p>
+            <p className="font-inter font-medium text-[12px] sm:text-[14px] lg:text-[16px] text-[#494949] dark:text-white leading-7">
+              Tokenomics
+            </p>
           </div>
 
           <div className="flex gap-5 sm:gap-7 md:gap-9 lg:gap-10 items-center">
