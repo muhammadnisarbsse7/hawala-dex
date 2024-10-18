@@ -1,8 +1,8 @@
 export const CrossIcon = () => {
   return (
     <svg
-      width="10"
-      height="11"
+      width="18"
+      height="17"
       viewBox="0 0 10 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

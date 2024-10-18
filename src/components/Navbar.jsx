@@ -93,108 +93,119 @@ function Navbar({ darkMode, setDarkMode }) {
 
       {/* Wallet Modal */}
       {isWalletModalOpen && (
-        <div className="absolute top-[192px] lg:top-[70px] mt-2 left-1/2 transform -translate-x-1/2 mx-auto w-[235px] bg-white rounded-[20px] shadow-lg p-6 z-50 lg:left-auto lg:transform-none lg:right-[1px] dark:lg:right-[1px]">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="font-inter font-semibold text-[14px] leading-[12.6px] text-[#FF3389]">
-              Your Wallet
-            </h2>
-            <button onClick={() => setIsWalletModalOpen(false)}>
-              <CrossIcon />
-            </button>
-          </div>
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          {/* Overlay background */}
+          <div
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setIsWalletModalOpen(false)}
+          ></div>
 
-          <div className="flex justify-between items-center mb-4 rounded-[6.3px] border border-[#FF3389]">
-            <button
-              className={`py-[6px] px-7 rounded-[6.3px] ${
-                isWalletView
-                  ? "bg-[#FF3389] font-inter font-medium text-[10.5px] leading-[12.6px] text-white"
-                  : "font-inter font-medium text-[10.5px] leading-[12.6px] text-[#9A9FBF]"
-              }`}
-              onClick={() => setIsWalletView(true)}
-            >
-              Wallet
-            </button>
-            <button
-              className={`py-[6px] px-2 rounded-[6.3px] ${
-                !isWalletView
-                  ? "bg-[#FF3389] font-inter font-medium text-[10.5px] leading-[12.6px] text-white"
-                  : "font-inter font-medium text-[10.5px] leading-[12.6px] text-[#9A9FBF]"
-              }`}
-              onClick={() => setIsWalletView(false)}
-            >
-              Transactions
-            </button>
-          </div>
+          {/* Modal content */}
+          <div className="relative w-[255px] bg-white rounded-[20px] shadow-lg p-6 z-50">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="font-inter font-semibold text-[20px] leading-[12.6px] text-[#FF3389]">
+                Your Wallet
+              </h2>
+              <button onClick={() => setIsWalletModalOpen(false)}>
+                <CrossIcon />
+              </button>
+            </div>
 
-          {!isWalletView && (
-            <div className="space-y-1">
-              {transactions.map((transaction, idx) => (
-                <div key={idx} className="flex items-center space-x-2">
-                  <div className="h-4 w-4 rounded-full flex items-center justify-center">
-                    <TickIcon />
+            <div className="flex justify-between items-center mb-5 rounded-[6.3px] border border-[#FF3389]">
+              <button
+                className={`transition-all duration-500 ease-in-out py-[6px] px-7 rounded-[6.3px] ${
+                  isWalletView
+                    ? "bg-[#FF3389] font-inter font-medium text-[13.5px] leading-[12.6px] text-white scale-105 shadow-lg"
+                    : "font-inter font-medium text-[13.5px] leading-[12.6px] text-[#9A9FBF]  hover:text-[#FF3389] hover:scale-105"
+                }`}
+                onClick={() => setIsWalletView(true)}
+              >
+                Wallet
+              </button>
+              <button
+                className={`transition-all duration-500 ease-in-out py-[6px] px-2 rounded-[6.3px] ${
+                  !isWalletView
+                    ? "bg-[#FF3389] font-inter font-medium text-[13.5px] leading-[12.6px] text-white scale-105 shadow-lg"
+                    : "font-inter font-medium text-[13.5px] leading-[12.6px] text-[#9A9FBF]  hover:text-[#FF3389] hover:scale-105"
+                }`}
+                onClick={() => setIsWalletView(false)}
+              >
+                Transactions
+              </button>
+            </div>
+
+            {!isWalletView && (
+              <div className="space-y-1">
+                {transactions.map((transaction, idx) => (
+                  <div key={idx} className="flex items-center space-x-2">
+                    <div className="h-5 w-8 rounded-full flex items-center justify-center">
+                      <TickIcon />
+                    </div>
+                    <p className="font-inter font-normal text-[10px] text-[#000000] leading-[7.26px]">
+                      {transaction}
+                    </p>
                   </div>
-                  <p className="font-inter font-normal text-[6px] text-[#000000] leading-[7.26px]">
-                    {transaction}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
 
-          {isWalletView && (
-            <div>
-              <div className="mb-5">
-                <div className="flex justify-between items-center bg-[#F7F8FD] border border-[#FF3389] rounded-lg p-2">
-                  <span className="font-inter font-semibold text-[8.4px] text-[#4A4A4A] leading-[11.2px]">
-                    0xec7842178520bb71f30523
-                  </span>
-                  <button
-                    className="font-inter font-medium text-[7px] text-[#FF3389] leading-[8.4px]"
-                    onClick={() =>
-                      navigator.clipboard.writeText("0xec7842178520bb71f30523")
-                    }
-                  >
-                    Copy
+            {isWalletView && (
+              <div>
+                <div className="mb-5">
+                  <div className="flex justify-between items-center bg-[#F7F8FD] border border-[#FF3389] rounded-lg p-2">
+                    <span className="font-inter font-semibold text-[10.4px] text-[#4A4A4A] leading-[11.2px]">
+                      0xec7842178520bb71f30523
+                    </span>
+                    <button
+                      className="font-inter font-medium text-[10px] text-[#FF3389] leading-[8.4px]"
+                      onClick={() =>
+                        navigator.clipboard.writeText(
+                          "0xec7842178520bb71f30523"
+                        )
+                      }
+                    >
+                      Copy
+                    </button>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center mb-5">
+                  <button className="flex font-inter font-medium text-[12.5px] leading-[12.71px] items-center bg-[#26A17B] text-white rounded-full px-4 py-1">
+                    <TonIcon />
+                    USDT Chain
                   </button>
+                  <a
+                    href="#"
+                    className="font-inter font-medium text-[12.4px] text-[#126FB2] leading-[10.17px]"
+                  >
+                    ETHScan
+                  </a>
                 </div>
-              </div>
 
-              <div className="flex justify-between items-center mb-5">
-                <button className="flex font-inter font-medium text-[10.5px] leading-[12.71px] items-center bg-[#26A17B] text-white rounded-full px-4 py-1">
-                  <TonIcon />
-                  USDT Chain
-                </button>
-                <a
-                  href="#"
-                  className="font-inter font-medium text-[8.4px] text-[#126FB2] leading-[10.17px]"
-                >
-                  ETHScan
-                </a>
-              </div>
-
-              <div className="flex flex-col">
-                <div className="flex justify-between mb-2">
-                  <span className="font-inter font-medium text-[10.5px] text-[#4A4A4A] leading-[12.71px]">
-                    Balance
-                  </span>
-                  <span className="font-inter font-medium text-[10.5px] text-[#4A4A4A] leading-[12.71px]">
-                    0.114965
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-inter font-medium text-[10.5px] text-[#4A4A4A] leading-[12.71px]">
-                    HawalaDEX
-                  </span>
-                  <span className="font-inter font-medium text-[10.5px] text-[#4A4A4A] leading-[12.71px]">
-                    0
-                  </span>
+                <div className="flex flex-col">
+                  <div className="flex justify-between mb-2">
+                    <span className="font-inter font-medium text-[12.5px] text-[#4A4A4A] leading-[12.71px]">
+                      Balance
+                    </span>
+                    <span className="font-inter font-medium text-[12.5px] text-[#4A4A4A] leading-[12.71px]">
+                      0.114965
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-inter font-medium text-[12.5px] text-[#4A4A4A] leading-[12.71px]">
+                      HawalaDEX
+                    </span>
+                    <span className="font-inter font-medium text-[12.5px] text-[#4A4A4A] leading-[12.71px]">
+                      0
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-          <button className="mt-6 w-full font-inter font-semibold text-[10.5px] leading-[12.6px] py-1 border border-[#999999] text-[#999999] rounded-[5.6px] hover:bg-[#eeeeee]">
-            Disconnect Wallet
-          </button>
+            )}
+            <button className="transition-transform duration-500 ease-in-out mt-6 w-full font-inter font-semibold text-[12.5px] leading-[12.6px] py-1 border border-[#999999] text-[#999999] rounded-[5.6px] hover:scale-105 hover:text-[#FF3389] hover:border-[#FF3389]">
+              Disconnect Wallet
+            </button>
+          </div>
         </div>
       )}
     </>
