@@ -114,7 +114,7 @@ const SwapCard = () => {
 
       {/* Swap Button */}
       <button
-        className="flex justify-center gap-2 w-full bg-gradient-to-l from-[#F64F59] to-[#FF3389] text-white font-semibold py-2.5 rounded-3xl text-lg transition hover:opacity-90"
+        className="flex justify-center gap-2 w-full bg-gradient-to-l from-[#F64F59] to-[#FF3389] text-white font-semibold py-2.5 rounded-3xl text-lg  hover:opacity-90 transition-transform duration-500 ease-in-out hover:scale-105"
         onClick={() =>
           alert(
             `Swapping ${btcAmount.toFixed(5)} BTC for ${usdtAmount.toFixed(
