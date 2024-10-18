@@ -54,13 +54,14 @@ function Navbar({ darkMode, setDarkMode }) {
           {/* Connect BTC Wallet Button */}
           <button
             onClick={() => setIsUsdtOpen(!isUsdtOpen)}
-            className=" p-1 sm:p-3 rounded-xl bg-[#FF3389] hover:bg-[#FF2070] text-white flex items-center space-x-0.5  sm:space-x-2"
+            className=" p-1 sm:p-3 rounded-xl bg-[#FF3389] hover:bg-[#FF2070] text-white flex items-center space-x-0.5 sm:space-x-2 transition-transform duration-500 ease-in-out hover:scale-105"
           >
             <BtcIcon />
             <span className="text-[6px] sm:text-[12px] lg:text-[16px]">
               Connect BTC
             </span>
           </button>
+
           {isUsdtOpen && (
             <div className="absolute top-[65px] right-[125px] sm:right-[198px] sm:top-[80px] w-[72px]  sm:w-[130px]  lg:w-[154px] lg:right-[250px] bg-white rounded-xl shadow-lg">
               <button className="w-full px-2 py-1  sm:p-3 rounded-xl font-inter font-normal text-[10px] sm:text-[16px] text-[#494949] leading-[19.36px] flex items-start justify-start gap-2 hover:bg-[#FF2070]">
@@ -73,7 +74,7 @@ function Navbar({ darkMode, setDarkMode }) {
           {/* Connect USDT Wallet Button */}
           <button
             onClick={() => setIsWalletModalOpen(!isWalletModalOpen)}
-            className="p-1 sm:p-3 rounded-xl bg-[#FF3389] hover:bg-[#FF2070] text-white flex items-center space-x-0.5 sm:space-x-2"
+            className="p-1 sm:p-3 rounded-xl bg-[#FF3389] hover:bg-[#FF2070] text-white flex items-center space-x-0.5 sm:space-x-2 transition-transform duration-500 ease-in-out hover:scale-105"
           >
             <UsdtIcon />
             <span className="text-[6px] sm:text-[12px] lg:text-[16px]">
@@ -84,7 +85,7 @@ function Navbar({ darkMode, setDarkMode }) {
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="px-2 py-1.5 sm:p-3 bg-[#FF3389] hover:bg-[#FF2070] rounded-full text-white"
+            className="px-2 py-1.5 sm:p-3 bg-[#FF3389] hover:bg-[#FF2070] rounded-full text-white transition-transform duration-500 ease-in-out hover:scale-105"
           >
             {darkMode ? <SunIcon /> : <MoonIcon />}
           </button>
