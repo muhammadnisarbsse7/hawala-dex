@@ -25,33 +25,34 @@ const LandingPage = () => {
       style={{ backgroundImage: `url(${BgImage})` }}
     >
       {/* Mobile layout */}
-      <div className="grid lg:hidden gap-7 my-28">
+      <div className="grid lg:hidden  gap-7 my-28">
         {/* Swap Card - Displayed first on mobile */}
-        <div className="grid min-h-[450px]">
-          <SwapCard />
-        </div>
 
         {/* Bitcoin Data - Displayed second on mobile */}
-        <div className="grid min-h-[450px]">
+        {/* <div className="grid min-h-[450px]">
           <BitcoinCard {...bitcoinData} />
+        </div> */}
+
+        <div className="grid min-h-[450px]">
+          <SwapCard />
         </div>
 
         {/* Price Chart - Displayed last on mobile */}
-        <div className="grid min-h-[450px]">
+        {/* <div className="grid min-h-[450px]">
           <ApexLineCharts />
-        </div>
+        </div> */}
       </div>
 
       {/* Larger screen layout (unchanged from original) */}
-      <div className="hidden lg:grid lg:grid-cols-10 lg:gap-7 my-28">
+      <div className="hidden lg:grid lg:grid-cols-11 lg:gap-7 my-28">
         <div className="grid lg:col-span-3 min-h-[450px]">
-          <BitcoinCard {...bitcoinData} />
+          {/* <BitcoinCard {...bitcoinData} /> */}
         </div>
-        <div className="grid lg:col-span-3 min-h-[450px]">
+        <div className="grid lg:col-span-5 min-h-[450px]">
           <SwapCard />
         </div>
-        <div className="grid lg:col-span-4 min-h-[450px]">
-          <ApexLineCharts />
+        <div className="grid lg:col-span-3 min-h-[450px]">
+          {/* <ApexLineCharts /> */}
         </div>
       </div>
     </main>
