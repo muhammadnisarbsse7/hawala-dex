@@ -79,7 +79,7 @@ const SwapCard = () => {
       {/* Swap Icon */}
       <div className="flex justify-start  items-center mb-5 ">
         <div className="relative ">
-          <div className="flex w-2\80 p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#595959] dark:text-white  dark:opacity-100 opacity-50 gap-2 leading-[24px] text-center ">
+          <div className="flex w-2\80 p-2.5 mt-1 font-montserrat font-bold text-[16px] text-[#FF3389] dark:tex-[#FF3389]  dark:opacity-100  gap-2 leading-[24px] text-center ">
             BTC ${exchangeRate}
           </div>
         </div>
